@@ -1,0 +1,267 @@
+// Vendor Plugins
+@import "neat"
+
+//Modules
+@import "modules/colors"
+
+//Partials
+@import "partials/typography"
+@import "partials/grids"
+@import "partials/base"
+@import "partials/reset"
+
+$article-layout-grid: (columns: 1, gutter: 5px)
+$article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
+$article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width: 1280px)")
+
+.clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+a:hover
+  background-color: $yellow
+
+h3
+  font-family: $font-header
+  font-size: 1.25em
+  font-weight: 500
+  color: $black
+  text-transform: uppercase
+
+header
+  //@include grid-visual
+  @include grid-container
+  padding-top: 3.75em
+  position: fixed
+  width: 100%
+  background-color: rgba(252,251,247,.75)
+
+body
+  padding-bottom: 6em
+
+.logo-header
+  @include grid-column(1)
+
+.nav-menu
+  display: none
+  padding-left: 0
+  @include grid-media($article-layout-grid--tablet-up)
+    display: inline-table
+    @include grid-column(11)
+
+.nav-menu ul
+  height: 50px
+  padding-top: 1em
+
+.nav-menu ul li
+  font-family: $font-header
+  display: inline-table
+  font-weight: 500
+  list-style-type: none
+  text-transform: uppercase
+  padding-right: 2em
+  vertical-align: middle
+
+.nav-menu ul li a
+  text-decoration: none
+  color: $black
+
+.mySidenavMenu
+  font-family: $font-header
+  display: inline-table
+  font-weight: 500
+  list-style-type: none
+  text-transform: uppercase
+  padding-right: 2em
+  padding-top: 1em
+  vertical-align: middle
+  @include grid-push(1)
+  display: inline-table
+  @media(min-width: 768px)
+    display: none
+
+.sidenav
+  height: 100%
+  width: 0
+  position: fixed
+  z-index: 1
+  top: 0
+  left: 0
+  background-color: $black
+  overflow-x: hidden
+  padding-top: 60px
+  transition: 0.5s
+
+.sidenav ul
+  padding-top: 20px
+
+.sidenav a
+  padding: 8px 8px 8px 32px
+  font-family: $font-header
+  text-transform: uppercase
+  font-weight: 100
+  text-decoration: none
+  font-size: 1.25em
+  color: white
+  display: block
+  transition: 0.3s
+
+.sidenav .closebtn
+  position: absolute
+  top: 0
+  right: 25px
+  font-size: 36px
+  margin-left: 50px
+
+.home-intro
+  @include grid-container
+  //@include grid-visual
+
+.intro
+  padding-top: 10em
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    @include grid-push(1)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    position: fixed
+    @include grid-column(4)
+    @include grid-push(1)
+    max-width: none
+
+.intro-title
+  font-family: $font-title
+  font-size: 4em
+  font-weight: 100
+  line-height: 85%
+  @media(min-width: 768px)
+    font-size: 5.25em
+
+.intro-body
+  padding: 1em 0 .25em
+  font-family: $font-body
+  font-weight: 100
+  font-size: 1.2em
+  line-height: 125%
+  @media(min-width: 768px)
+    font-size: 125%
+
+.home-about
+  padding-top: 3em
+  @include grid-push(2)
+  max-width: 275px
+  line-height: 150%
+  font-family: $font-body
+  font-weight: 300
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(1)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    max-width: none
+    padding-top: 23em
+    max-width: 500px
+
+.about-diagram
+  padding-bottom: 3em
+  width: 95%
+
+.home-work
+  @include grid-container
+  //@include grid-visual
+
+.work-intro
+  @extend .home-about
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    padding-top: 3em
+
+.project-preview
+  padding-top: 3em
+  @include grid-push(2)
+  width: auto
+  max-width: 275px
+  //@include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(1)
+    max-width: none
+  //@include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+    padding-top: 3em
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(1)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    padding-top: 3em
+
+.project-info
+  @extend .home-about
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    padding-top: 1em
+
+.project-info a
+  text-decoration: none
+  color: $black
+
+.work-project .project-info a:hover
+  background-color: $yellow
+
+.project-list-name
+  text-transform: uppercase
+  font-family: $font-header
+  font-weight: 500
+
+.project-description
+  line-height: 150%
+  font-family: $font-body
+  font-weight: 300
+
+.view-case-study
+  font-weight: 500
+
+.basic-link
+  text-transform: uppercase
+  font-family: $font-header
+  font-weight: 500
+  text-decoration: none
+  color: $black
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-push(1)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-push(6)
+
+.home-experience
+  @include grid-container
+  //@include grid-visual
+
+.experience-intro
+  @extend .home-about
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    padding-top: 3em
+
+.home-contact
+  @include grid-container
+  //@include grid-visual
+
+.contact-intro
+  @extend .home-about
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    padding-top: 3em
