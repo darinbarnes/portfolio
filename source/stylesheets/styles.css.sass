@@ -31,7 +31,7 @@ h3
   text-transform: uppercase
 
 header
-  //@include grid-visual
+  @include grid-visual
   @include grid-container
   padding-top: 3.75em
   position: fixed
@@ -41,13 +41,24 @@ header
 body
   padding-bottom: 6em
 
+.subtitle
+  font-size: 1.2em
+  font-weight: 500
+  @media(min-width: 768px)
+    font-size: 1.5em
+
 .logo-header
   @include grid-column(1)
+  margin-left: -5px
 
 .nav-menu
   display: none
   padding-left: 0
   @include grid-media($article-layout-grid--tablet-up)
+    display: inline-table
+    @include grid-column(10)
+    @include grid-push(1)
+  @include grid-media($article-layout-grid--desktop-up)
     display: inline-table
     @include grid-column(11)
 
@@ -78,7 +89,6 @@ body
   padding-top: 1em
   vertical-align: middle
   @include grid-push(1)
-  display: inline-table
   @media(min-width: 768px)
     display: none
 
@@ -125,30 +135,34 @@ body
   max-width: 275px
   @include grid-media($article-layout-grid--tablet-up)
     @include grid-column(6)
-    @include grid-push(1)
+    @include grid-push(2)
     max-width: none
   @include grid-media($article-layout-grid--desktop-up)
     position: fixed
     @include grid-column(4)
     @include grid-push(1)
     max-width: none
+    z-index: -1
 
 .intro-title
+  margin-left: -6px
   font-family: $font-title
   font-size: 4em
   font-weight: 100
   line-height: 85%
   @media(min-width: 768px)
+    margin-left: -8px
     font-size: 5.25em
 
 .intro-body
-  padding: 1em 0 .25em
+  padding: 1.5em 0 .25em
   font-family: $font-body
   font-weight: 100
-  font-size: 1.2em
+  font-size: 1.25em
   line-height: 125%
   @media(min-width: 768px)
-    font-size: 125%
+    font-size: 1.5em
+    max-width: 500px
 
 .home-about
   padding-top: 3em
@@ -159,17 +173,22 @@ body
   font-weight: 300
   @include grid-media($article-layout-grid--tablet-up)
     @include grid-column(8)
-    @include grid-push(1)
+    @include grid-push(2)
     max-width: none
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(6)
     max-width: none
-    padding-top: 23em
-    max-width: 500px
+    padding-top: 12.5em
+    max-width: 750px
+
+.home-about p
+  font-size: 1em
+  @media(min-width: 768px)
+    font-size: 1.125em
 
 .about-diagram
-  padding-bottom: 3em
+  padding-bottom: 6em
   width: 95%
 
 .home-work
@@ -198,7 +217,7 @@ body
     padding-top: 3em
   @include grid-media($article-layout-grid--tablet-up)
     @include grid-column(8)
-    @include grid-push(1)
+    @include grid-push(2)
     max-width: none
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
@@ -223,26 +242,48 @@ body
   text-transform: uppercase
   font-family: $font-header
   font-weight: 500
+  font-size: 1.125em
+  @media(min-width: 768px)
+    font-size: 1.25em
+
+.project-list-name span
+  border-bottom: 3px solid $yellow
 
 .project-description
+  padding-top: .5em
   line-height: 150%
   font-family: $font-body
   font-weight: 300
+  font-style: italic
+  font-size: 1em
 
 .view-case-study
   font-weight: 500
 
 .basic-link
   text-transform: uppercase
+  //text-decoration: none
   font-family: $font-header
+  border-bottom: 2px solid $yellow
   font-weight: 500
   text-decoration: none
   color: $black
+
+.work-link
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
-    @include grid-push(1)
+    @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-push(6)
+
+.resume-link
+  @extend .work-link
+
+.contact-link
+  @extend .work-link
+
+.link-text
+  border-bottom: 2px solid $yellow
 
 .home-experience
   @include grid-container
