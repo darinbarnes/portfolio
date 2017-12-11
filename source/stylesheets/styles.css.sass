@@ -9,10 +9,16 @@
 @import "partials/grids"
 @import "partials/base"
 @import "partials/reset"
+@import "partials/uniqlo"
 
 $article-layout-grid: (columns: 1, gutter: 5px)
 $article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
 $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width: 1280px)")
+
+//*
+  background: #000 !important
+  color: #0f0 !important
+  outline: solid #f00 1px !important
 
 .clearfix
   &:after
@@ -31,7 +37,7 @@ h3
   text-transform: uppercase
 
 header
-  @include grid-visual
+  //@include grid-visual
   @include grid-container
   padding-top: 3.75em
   position: fixed
@@ -53,7 +59,7 @@ body
 
 .nav-menu
   display: none
-  padding-left: 0
+  padding-left: 10px
   @include grid-media($article-layout-grid--tablet-up)
     display: inline-table
     @include grid-column(10)
@@ -86,6 +92,7 @@ body
   list-style-type: none
   text-transform: uppercase
   padding-right: 2em
+  padding-left: 10px
   padding-top: 1em
   vertical-align: middle
   @include grid-push(1)
@@ -269,6 +276,9 @@ body
   text-decoration: none
   color: $black
 
+.basic-link .link-text a:hover
+  background-color: $yellow
+
 .work-link
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
@@ -306,3 +316,134 @@ body
     @include grid-column(4)
     @include grid-push(6)
     padding-top: 3em
+
+.project-intro
+  padding-top: 10em
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    @include grid-push(2)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+    max-width: none
+    z-index: -1
+
+.project-header
+  font-family: $font-header
+  font-size: 1.75em
+  font-weight: 300
+  padding-bottom: .5em
+  line-height: 110%
+  @media(min-width: 768px)
+    font-size: 2.5em
+
+.project-header-white
+  @extend .project-header
+  color: white
+  font-weight: 100
+
+.project-subtitle
+  font-family: $font-header
+  font-size: 1.125em
+  line-height: 150%
+  font-weight: 500
+
+.project-subtitle-white
+  @extend .project-subtitle
+  color: white
+
+.project-body
+  font-family: $font-body
+  font-weight: 300
+  font-size: 1em
+  line-height: 150%
+  @media(min-width: 768px)
+    font-size: 1.125em
+
+.project-body-white
+  @extend .project-body
+  color: white
+  font-weight: 100
+
+.project-image-one-half
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+
+.project-text-one-half
+  @include grid-column(10)
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+
+.project-image-one-third
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(3)
+
+.project-image-full
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.project-image-right
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+
+.project-text-full
+  @include grid-column(10)
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+
+.project-image-one-fourth
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(2.5)
+
+.project-text-left
+  @include grid-column(10)
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
