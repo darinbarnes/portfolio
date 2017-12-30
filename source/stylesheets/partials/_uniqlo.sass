@@ -5,8 +5,9 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 .uniqlo-intro
   @include grid-container
   //@include grid-visual
+  background-color: rgba ($neutral, .95)
 
-.uniqlo-intro .intro
+//.uniqlo-intro .intro
   padding-top: 10em
   @include grid-push(2)
   max-width: 275px
@@ -18,10 +19,27 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     //position: fixed
     @include grid-column(4)
     @include grid-push(1)
-    max-width: none
     z-index: -1
 
+.uniqlo-intro .intro-body
+  max-width: 450px
+
 .uniqlo-hero
+  background-image: image-url("bg_uniqlo_splash.jpg")
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 250px
+  padding-top: 3em
+  @media(min-width: 768px)
+    height: 500px
+  @media(min-width: 780px)
+    height: 900px
+
+
+//FOR INTRO STEPS TEXT
+//.uniqlo-hero
   @include grid-push(2)
   max-width: 275px
   line-height: 125%
@@ -38,7 +56,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     max-width: none
     padding-top: 9em
     padding-bottom: 3em
-    max-width: 475px
+    max-width: 425px
 
 .uniqlo-hero .project-subtitle
   color: #FF2222
@@ -122,51 +140,197 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @media(min-width: 768px)
     margin-left: -1.5em
 
-.uniqlo-story-intro
-  padding-bottom: 3em
-  width: 100%
-  @media(min-width: 768px)
-    width: 100%
+.uniqlo-story
+  @include grid-container
+  @include grid-visual
 
-.uniqlo-story .project-subtitle
-  color: #FF2222
-
-.uniqlo-story-u
-  padding-top: 3em
-  @include grid-column(10)
+.uniqlo-story-intro-text
+  padding-bottom: 1em
+  @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
-    //height: 450px
-    background-image: image-url("uniqlo_story_bg_u.png")
-    background-size: cover
-    background-position: left top
-    height: 475px
-    background-repeat: no-repeat
     @include grid-column(10)
     @include grid-push(2)
-    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.uniqlo-story-intro-image
+  padding-bottom: 3em
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5.5)
+    @include grid-push(1)
+    padding-bottom: 6em
+
+.uniqlo-story-intro-image-size
+  width: 100%
+
+.uniqlo-story-u-image
+  @extend .uniqlo-story-intro-image
+  padding-bottom: 0px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+    padding-bottom: 6em
+
+.uniqlo-story-u-text
+  @extend .uniqlo-story-intro-text
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+
+.uniqlo-story-1-text-browse
+  @extend .uniqlo-story-intro-text
+
+.uniqlo-story-1-image-browse
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+
+.uniqlo-story-1-image-browse-size
+  width: 100%
+
+.uniqlo-story-1-image-send
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+    @include grid-push(1)
+
+.uniqlo-story-1-image-send-size
+  width: 95%
+
+.uniqlo-story-1-text-send
+  @extend .uniqlo-story-intro-text
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 2em
+    @include grid-column(4)
+
+.uniqlo-story-2-image-diagram
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(7)
+
+.uniqlo-story-2-image-diagram-size
+  width: 100%
+
+.uniqlo-story-2-text-diagram
+  @extend .uniqlo-story-intro-text
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 2em
+    @include grid-column(4)
+
+.uniqlo-story-2-image-store
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.uniqlo-story-2-image-store-size
+  width: 100%
+
+.uniqlo-story-2-text-concierge
+  @extend .uniqlo-story-intro-text
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(2)
+
+.uniqlo-story-2-image-concierge
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(3)
+    @include grid-push(1)
+
+.uniqlo-story-2-image-concierge-size
+  width: 100%
+
+.uniqlo-story-2-image-fitting
+  @extend .uniqlo-story-intro-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(5)
     @include grid-push(1)
 
-.uniqlo-story-u-text
-  max-width: 300px
-  @include grid-media($article-layout-grid--tablet-up)
-    @include grid-push(4)
-
-.uniqlo-story-u-text .project-subtitle
-  color: $black
-
-.uniqlo-story-u-image
+.uniqlo-story-2-image-fitting-size
   width: 100%
-  text-align: center
-  @include grid-column(12)
-  @include grid-media($article-layout-grid--tablet-up)
-    @include grid-column(6)
-    max-width: none
+
+.uniqlo-story-2-text-fitting
+  @extend .uniqlo-story-intro-text
   @include grid-media($article-layout-grid--desktop-up)
-    @include grid-column(6)
-    @include grid-push(.5)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.uniqlo-story-2-image-mirror
+  @extend .uniqlo-story-intro-image
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.uniqlo-story-2-image-mirror-size
+  width: 100%
+
+.project-subtitle-uniqlo
+  color: #FF2222
+  line-height: 150%
+
+.uniqlo-story .project-body
+  max-width: 275px
+  @media(min-width: 768px)
+    max-width: 475px
+
+.uniqlo-story-header
+  color: #FF2222
+  font-family: $font-header
+  padding-top: .75em
+  font-size: 3em
+  font-weight: 300
+  padding-bottom: .25em
+  @media(min-width: 768px)
+    font-size: 4em
+
+.uniqlo-story-header-bold
+  font-weight: 300
+  color: #FF2222
 
 .uniqlo-story .project-text-full
   padding-bottom: 3em
+
+//.uniqlo-story-u .project-image-left .uniqlo-story-onboarding
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(4)
+
+//.uniqlo-project-image
+  width: auto
+  max-width: 300px
+  @media(min-width: 768px)
+    max-width: 750px
+  @media(min-width: 1280px)
+    max-width: none
+
+//.uniqlo-story .project-text-left-float
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+//.uniqlo-story .project-image-right
+  padding-bottom: 3em
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+    padding-bottom: 6em
+
+//.uniqlo-story .project-text-left
+  padding-bottom: 3em
+  //@include grid-media($article-layout-grid--desktop-up)
+    padding-bottom: 6em
+
+//.uniqlo-story .project-image-left
+  padding-bottom: 3em
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-bottom: 6em
+
+//.uniqlo-story-intro
+  //padding-bottom: 3em
+  width: 100%
+  //padding-right: 1em
+  @media(min-width: 768px)
+    width: 100%

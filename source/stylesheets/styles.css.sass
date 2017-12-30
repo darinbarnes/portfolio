@@ -36,22 +36,26 @@ h3
   color: $black
   text-transform: uppercase
 
+h4
+  font-weight: none
+
 header
   //@include grid-visual
   @include grid-container
   padding-top: 3.75em
   position: fixed
   width: 100%
-  background-color: rgba(252,251,247,.75)
+  background-color: rgba(252,251,247,.5)
+  z-index: 999
 
 body
   padding-bottom: 6em
 
 .subtitle
   font-size: 1.2em
-  font-weight: 500
+  font-weight: 300
   @media(min-width: 768px)
-    font-size: 1.5em
+    font-size: 1.75em
 
 .logo-header
   @include grid-column(1)
@@ -148,7 +152,7 @@ body
     position: fixed
     @include grid-column(4)
     @include grid-push(1)
-    max-width: none
+    max-width: 400px
     z-index: -1
 
 .intro-title
@@ -172,7 +176,7 @@ body
     max-width: 500px
 
 .home-about
-  padding-top: 3em
+  padding-bottom: 6em
   @include grid-push(2)
   max-width: 275px
   line-height: 150%
@@ -191,6 +195,7 @@ body
 
 .home-about p
   font-size: 1em
+  line-height: 150%
   @media(min-width: 768px)
     font-size: 1.125em
 
@@ -201,9 +206,11 @@ body
 .home-work
   @include grid-container
   //@include grid-visual
+  padding-bottom: 6em
 
 .work-intro
   @extend .home-about
+  padding-bottom: 0px
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(6)
@@ -233,6 +240,8 @@ body
 
 .project-info
   @extend .home-about
+  padding-bottom: 0px
+  font-size: .85em
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(6)
@@ -241,6 +250,11 @@ body
 .project-info a
   text-decoration: none
   color: $black
+
+.project-info span
+  font-size: 1.125em
+  @media(min-width: 768px)
+    font-size: 1.125em
 
 .work-project .project-info a:hover
   background-color: $yellow
@@ -251,7 +265,7 @@ body
   font-weight: 500
   font-size: 1.125em
   @media(min-width: 768px)
-    font-size: 1.25em
+    font-size: 1.125em
 
 .project-list-name span
   border-bottom: 3px solid $yellow
@@ -265,7 +279,6 @@ body
   font-family: $font-body
   font-weight: 300
   font-style: italic
-  font-size: 1em
 
 .view-case-study
   font-weight: 500
@@ -274,16 +287,19 @@ body
   text-transform: uppercase
   //text-decoration: none
   font-family: $font-header
-  border-bottom: 2px solid $yellow
   font-weight: 500
   text-decoration: none
   color: $black
+  font-size: 1.125em
+  @media(min-width: 768px)
+    font-size: 1.125em
 
 .basic-link span:hover
   background-color: $yellow
 
 .work-link
   @include grid-push(2)
+  padding-top: 1em
   @include grid-media($article-layout-grid--tablet-up)
     @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
@@ -296,14 +312,16 @@ body
   @extend .work-link
 
 .link-text
-  border-bottom: 2px solid $yellow
+  border-bottom: 3px solid $yellow
 
 .home-experience
   @include grid-container
   //@include grid-visual
+  padding-bottom: 6em
 
 .experience-intro
   @extend .home-about
+  padding-bottom: 0px
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(6)
@@ -312,9 +330,11 @@ body
 .home-contact
   @include grid-container
   //@include grid-visual
+  padding-bottom: 6em
 
 .contact-intro
   @extend .home-about
+  padding-bottom: 0px
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(6)
@@ -380,6 +400,39 @@ body
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(6)
 
+.project-image-left-float
+  text-align: center
+  width: auto
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
+.project-image-right-float
+  text-align: center
+  width: auto
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
+.project-text-left-float
+  text-align: left
+  @include grid-column(10)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(6)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
 .project-text-one-half
   @include grid-column(10)
   @include grid-push(2)
@@ -413,10 +466,67 @@ body
   text-align: center
   @include grid-column(12)
   @include grid-media($article-layout-grid--tablet-up)
-    @include grid-column(6)
-    max-width: none
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+
+.project-image-left
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+
+.project-image-left-major
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(7)
+
+.project-image-left-minor
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+
+.project-text-right-minor
+  text-align: left
+  @include grid-column(10)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+
+.project-text-right-major
+  text-align: left
+  @include grid-column(10)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(7)
+
+.project-text-right
+  text-align: left
+  @include grid-column(10)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+    @include grid-push(2)
+    max-width: 475px
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(6)
+    @include grid-push(1)
 
 .project-text-full
   @include grid-column(10)
