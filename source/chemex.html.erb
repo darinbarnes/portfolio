@@ -1,0 +1,112 @@
+---
+title: Elevate Your Coffee
+---
+
+<header>
+  <div class="nav-header">
+    <div class="logo-header">
+      <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
+    </div>
+    <div class="mySidenavMenu">
+      <span onclick="openNav()">Menu</span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="images/db_logo_extended.png"/>
+      <ul>
+        <a href="index.html">Home</a>
+        <a href="">Work</a>
+      </ul>
+    </div>
+    <div class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">Work</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<body>
+  <div class="chemex-intro">
+    <div class="project-intro">
+      <p class="intro-body">  <br></p>
+      <p class="intro-title">Elevate<br>your Coffee<br></p>
+      <p class="intro-body">A concept design for a new responsive site for the Chemex coffeemaker: a glass, manual pour-over style of coffeemaker. The site focuses on the two primary benefits of the Chemex; the high quality taste and simple brewing process that has remained unchanged since 1941.</p>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <section class="chemex-hero">
+  </section>
+  <div class="clearfix"></div>
+  <section class="chemex-body">
+    <section class="chemex-research">
+      <div class="chemex-research-text">
+        <h3 class="project-header">Where to Begin?</h3>
+        <p class="project-body">The first step was to research the existing Chemex site to identify its strengths and weaknesses. Though the existing site had beautiful product imagery, the site was information dense with multiple menu options. The path to the Chemex store is not immediately apparent and requires navigating through the menu or scrolling. It was clear that the new responsive site should provide users with basic product benefits and easy access to the shop.</p>
+      </div>
+      <div class="chemex-research-image-mobile">
+        <img src="images/chemex_research_existing_mobile.jpg" class="chemex-research-image-size"></img>
+      </div>
+      <div class="chemex-research-image">
+        <img src="images/chemex_research_existing.jpg" class="chemex-research-image-size"></img>
+      </div>
+      <div class="clearfix"></div>
+    </section>
+    <section class="chemex-identity">
+      <div class="chemex-identity-logo-image">
+        <img src="images/chemex_identity_logo.jpg" class="chemex-identity-logo-image-size"></img>
+      </div>
+      <div class="chemex-identity-logo-text">
+        <h3 class="project-subtitle">A Timeless Identity<br> for a Timeless Design</h3>
+        <p class="project-body">The Chemex identity has shifted over the various years, often reflecting the graphic styles of its era. Given the unchanging design and process of the Chemex itself, it was decided to return to the original bold wordmark to update the identity.<br><br>
+        Only slight modifications were made to the wordmark, including a simple radius on the corners of the letterforms and an underline of the letter “X” to represent the basic Chemex shape. </p>
+      </div>
+    </section>
+
+  </section>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+    window.sr = ScrollReveal({ reset: true });
+    sr.reveal('.chemex-intro', {
+      origin: 'left',
+      duration: 2000,
+      scale: 1,
+      reset: false,
+    });
+    sr.reveal('.chemex-hero', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.25,
+      scale: 1,
+      reset: false,
+    });
+    sr.reveal('.chemex-research-text', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+    });
+    sr.reveal('.chemex-research-image', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+    });
+    sr.reveal('.chemex-identity-logo-text', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+    });
+    sr.reveal('.chemex-identity-logo-image', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+    });
+    </script>
+  </body>
