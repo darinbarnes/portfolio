@@ -322,10 +322,17 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-column(4)
     @include grid-push(1)
 
+.uniqlo-story-2-text-mirror
+  @extend .uniqlo-story-intro-text
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
 .uniqlo-story-2-image-mirror
   @extend .uniqlo-story-intro-image
   @include grid-media($article-layout-grid--desktop-up)
-    @include grid-column(12)
+    @include grid-column(5)
+    @include grid-push(1)
 
 .uniqlo-story-2-image-mirror-size
   width: 100%
