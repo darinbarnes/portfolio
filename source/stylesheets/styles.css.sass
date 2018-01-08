@@ -11,6 +11,7 @@
 @import "partials/reset"
 @import "partials/uniqlo"
 @import "partials/chemex"
+@import "partials/sitemap"
 
 $article-layout-grid: (columns: 1, gutter: 5px)
 $article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
@@ -126,7 +127,7 @@ body
   font-weight: 100
   text-decoration: none
   font-size: 1.25em
-  color: white
+  color: $neutral
   display: block
   transition: 0.3s
 
@@ -151,9 +152,9 @@ body
     max-width: none
   @include grid-media($article-layout-grid--desktop-up)
     position: fixed
-    @include grid-column(4)
+    @include grid-column(5)
     @include grid-push(1)
-    max-width: 400px
+    max-width: 425px
     z-index: -1
 
 .intro-title
@@ -162,7 +163,7 @@ body
   font-size: 3em
   font-weight: 100
   @media(min-width: 768px)
-    line-height: 85%
+    line-height: 90%
     margin-left: -8px
     font-size: 5.25em
 
@@ -172,9 +173,13 @@ body
   font-weight: 100
   font-size: 1.25em
   line-height: 125%
+  color: $black
   @media(min-width: 768px)
     font-size: 1.5em
-    max-width: 500px
+
+.intro-body-white
+  @extend .intro-body
+  color: $neutral
 
 .home-about
   padding-bottom: 6em
@@ -280,6 +285,7 @@ body
   font-family: $font-body
   font-weight: 300
   font-style: italic
+  color: $black
 
 .view-case-study
   font-weight: 500
@@ -294,6 +300,11 @@ body
   font-size: 1.125em
   @media(min-width: 768px)
     font-size: 1.125em
+
+.basic-link-white
+  @extend .basic-link
+  font-weight: 300
+  color: $neutral
 
 .basic-link span:hover
   background-color: $yellow
@@ -347,7 +358,7 @@ body
   max-width: 275px
   @include grid-media($article-layout-grid--tablet-up)
     padding-top: 10em
-    @include grid-column(6)
+    @include grid-column(8)
     @include grid-push(2)
     max-width: none
   @include grid-media($article-layout-grid--desktop-up)
@@ -367,7 +378,7 @@ body
 
 .project-header-white
   @extend .project-header
-  color: white
+  color: $neutral
   font-weight: 100
 
 .project-subtitle
@@ -378,9 +389,11 @@ body
 
 .project-subtitle-white
   @extend .project-subtitle
-  color: white
+  color: $neutral
+  font-weight: 300
 
 .project-body
+  color: $black
   font-family: $font-body
   font-weight: 300
   font-size: 1em
@@ -396,8 +409,17 @@ body
 
 .project-body-white
   @extend .project-body
-  color: white
+  color: $neutral
   font-weight: 100
+
+.project-quote-white
+  color: $neutral
+  font-family: $font-header
+  font-size: 1.75em
+  line-height: 125%
+  font-weight: 100
+  @media (min-width: 768px)
+    font-size: 2.5em
 
 .project-basic-text
   padding-bottom: 1em

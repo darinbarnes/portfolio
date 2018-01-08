@@ -12,7 +12,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 
 .chemex-body
   @include grid-container
-  @include grid-visual
+  //@include grid-visual
 
 .chemex-hero
   background-image: image-url("images/bg_chemex_splash.jpg")
@@ -30,9 +30,6 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 .chemex-research
   padding-top: 3em
   padding-bottom: 3em
-  @media(min-width: 768px)
-    padding-top: 6em
-    padding-bottom: 6em
 
 .chemex-research-text
   padding-bottom: 1em
@@ -64,11 +61,8 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   width: 100%
 
 .chemex-identity
-  padding-top: 1.5em
-  padding-bottom: 1.5em
-  @media(min-width: 768px)
-    padding-top: 3em
-    padding-bottom: 3em
+  padding-top: 3em
+  padding-bottom: 3em
 
 .chemex-identity-logo-image
   text-align: center
@@ -80,7 +74,9 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(2)
 
 .chemex-identity-logo-image-size
-  width: 100%
+  width: 80%
+  @media(min-width: 1280px)
+    width: 100%
 
 .chemex-identity-logo-text
   @include grid-column(9)
@@ -89,6 +85,142 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-column(8)
     @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
-    padding-top: 2.5em
+    padding-top: 4.75em
     @include grid-column(3.25)
     @include grid-push(0)
+
+.chemex-identity-palette-image
+  @extend .chemex-identity-logo-image
+
+.chemex-identity-palette-image-size
+  @extend .chemex-identity-logo-image-size
+
+.chemex-identity-palette-text
+  @extend .chemex-identity-logo-text
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 8.125em
+
+.chemex-user
+  background-color: #ADA8A4
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 6em
+    padding-bottom: 6em
+
+.chemex-user-data-text
+  padding-bottom: 1em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.chemex-user-data-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(5)
+    @include grid-push(1)
+
+.chemex-user-data-image-size
+  width: 80%
+
+.chemex-user-strategy-text
+  padding-bottom: 1em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.chemex-user-prefA
+  padding-bottom: 1em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 3em
+    max-width: 475px
+    @include grid-column(5)
+    @include grid-push(1)
+
+.chemex-user-prefA-text
+  padding-bottom: 2em
+
+.chemex-user-prefA-image
+  text-align: center
+
+.chemex-user-prefA-image-size
+  width: 80%
+
+.chemex-user-prefB
+  @extend .chemex-user-prefA
+
+.chemex-user-prefB-text
+  @extend .chemex-user-prefA-text
+
+.chemex-user-prefB-image
+  @extend .chemex-user-prefA-image
+
+.chemex-user-prefB-image-size
+  width: 80%
+
+.chemex-user-choice-text
+  padding-bottom: 1em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(3)
+    @include grid-push(7)
+
+.chemex-user-choice-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.chemex-user-choice-image-size
+  width: 80%
+  @media(min-width: 1280px)
+    width: 50%
+
+.chemex-prototype-text
+  padding-bottom: 1em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 3em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.chemex-prototype-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.chemex-prototype-image-size
+  width: 100%

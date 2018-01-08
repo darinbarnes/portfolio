@@ -1,0 +1,354 @@
+$article-layout-grid: (columns: 1, gutter: 5px)
+$article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
+$article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width: 1280px)")
+
+.sitemap-intro
+  @include grid-container
+  //@include grid-visual
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-bottom: 6em
+
+.sitemap-intro .intro-body
+  max-width: 450px
+
+.sitemap-hero-image
+  text-align: center
+  padding-top: 3em
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.sitemap-hero-image-size
+  width: 100%
+
+.sitemap-body
+  @include grid-container
+  //@include grid-visual
+
+.sitemap-research
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-bottom: 6em
+
+.sitemap-research-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-research-image
+  text-align: center
+  padding-top: 3em
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
+.sitemap-research-image-size
+  width: 85%
+  @media(min-width: 768px)
+    width: 75%
+  @media(min-width: 1280px)
+    width: 75%
+
+.sitemap-user
+  background-color: #1B4651
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 6em
+    padding-bottom: 6em
+
+.sitemap-user-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-user-image
+  text-align: center
+  padding-top: 3em
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
+.sitemap-user-image-size
+  width: 85%
+  @media(min-width: 768px)
+    width: 65%
+  @media(min-width: 1280px)
+    width: 75%
+
+.sitemap-user-neha
+  padding-top: 3em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-user-neha .project-quote-white
+  padding-bottom: .5em
+
+.sitemap-user-neha li
+  @extend .project-body-white
+
+.sitemap-user-sean
+  @extend .sitemap-user-neha
+
+.sitemap-wireframe
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 3em
+    padding-bottom: 6em
+
+.sitemap-wireframe-sketch
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.sitemap-wireframe-sketch-size
+  width: 100%
+
+.sitemap-wireframe-text
+  padding-top: 3em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-bottom: 1em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-wireframe-image
+  display: none
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 3em
+    display: block
+    @include grid-column(8)
+    @include grid-push(2)
+
+.sitemap-wireframe-image-mobile
+  text-align: center
+  padding-top: 3em
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+
+.sitemap-wireframe-image-size
+  width: 100%
+
+.sitemap-wireframe-image-mobile-size
+  width: 100%
+
+.sitemap-feature
+  background-color: #1B4651
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 3em
+    padding-bottom: 6em
+
+.sitemap-feature-sketch
+  text-align: left
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    text-align: center
+    @include grid-column(5)
+
+.sitemap-feature-sketch-size
+  width: 85%
+  @media (min-width: 1280px)
+    width: 100%
+
+.sitemap-feature-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 12em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-feature-text li
+  @extend .project-body-white
+
+.sitemap-identity
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 6em
+    padding-bottom: 6em
+
+.sitemap-identity-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-identity-logo
+  text-align: center
+  padding-top: 3em
+  padding-bottom: 3em
+  @media (min-width:768px)
+    padding-top: 6em
+    padding-bottom: 6em
+
+.sitemap-identity-logo-size
+  width: 50%
+  @media (min-width: 768px)
+    width: 35%
+
+.sitemap-identity-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-bottom: 6em
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(5)
+    @include grid-push(1)
+
+.sitemap-identity-image-size
+  width: 100%
+  @media (min-width:1280px)
+    width: 100%
+
+.sitemap-identity-palette-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-identity-palette-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(5)
+    @include grid-push(1)
+
+.sitemap-identity-palette-size
+  width: 100%
+
+.sitemap-identity-typography-text
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-identity-typography-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(5)
+    @include grid-push(1)
+
+.sitemap-identity-typography-image-size
+  width: 100%
+
+.sitemap-prototype
+  background-color: #1B4651
+  padding-top: 3em
+  padding-bottom: 3em
+  @media(min-width: 768px)
+    padding-top: 6em
+    padding-bottom: 6em
+
+.sitemap-prototype-intro
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(1)
+
+.sitemap-prototype-full-text
+  padding-top: 3em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 10em
+    @include grid-column(3)
+    //@include grid-push(1)
+
+.sitemap-prototype-full-text .project-subtitle-white
+  color: #EE433D
+
+.sitemap-prototype-full-image
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-top: 3em
+    @include grid-column(10)
+    @include grid-push(1)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
+    @include grid-column(7)
+    @include grid-push(1)
+
+.sitemap-prototype-full-image-size
+  width: 100%
