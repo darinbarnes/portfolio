@@ -7,35 +7,32 @@ title: Darin Barnes
     <div class="logo-header">
       <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
     </div>
-    <div class="mySidenavMenu">
-      <span onclick="openNav()">Menu</span>
-    </div>
+  </div>
+</header>
+<body>
+  <div class="nav">
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <img src="images/db_logo_extended.png"/>
+      <img src="images/db_logo_extended.png"></img>
       <ul>
-        <a href="#about">About</a>
+        <a href="#about">Home</a>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </ul>
     </div>
-    <div class="nav-menu">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div class="mySidenavMenu">
+      <span onclick="openNav()">Menu</span>
     </div>
   </div>
-</header>
-<body>
   <div class="home-intro">
     <div class="intro">
       <p class="intro-body">Hello, I'm<br></p>
       <p class="intro-title">Darin<br>Barnes<br></p>
-      <p class="intro-body">Building on an architectural and graphic design background, I am a UX Designer interested in simple digital experiences that encourage users to engage with their physical world.</p>
+      <p class="intro-body">Building on an architectural and graphic design background, I am a UX Designer interested in simple digital experiences that encourage users to engage with their physical world.<br><br></p>
+      <div class="contact-link">
+        <a href="mailto:barnes.darin@gmail.com?subject=Hello" class="basic-link"><h4><span class="link-text">Let's talk ><br></span></h4></a>
+      </div>
     </div>
     <section class="home-about" id="#about">
       <img class="about-diagram" src="images/about_diagram.png"><img>
@@ -53,7 +50,7 @@ title: Darin Barnes
         <h3 class="subtitle">What have you been up to?<br><br></h3>
         <p>The following are projects that I have developed while working one-on-one with a mentor at Bloc.<br><br></p>
       </div>
-      <div class="work-project">
+      <div class="work-project" "uniqlo-preview">
         <img class="project-preview" src="images/uniqlo_preview.jpg"><img>
         <div class="project-info">
           <a href="uniqlo.html" class="project-list-name"><h4><span>U by Uniqlo - Concept Design<br></span></h4></a>
@@ -87,27 +84,16 @@ title: Darin Barnes
         <a href="" class="basic-link"><h4><span class="link-text">View All Work ><br></span></h4></a>
       </div>
     </section>
-    <!--section class="home-experience" id="#experience">
-      <div class="experience-intro">
-        <h3 class="subtitle">What's your experience?<br><br></h3>
-        <p>Lorem ipsum dolor amet cronut williamsburg austin shaman cloud bread bitters. Tattooed raclette artisan forage jean shorts austin, edison bulb air plant. Viral retro four dollar toast fixie, paleo food truck celiac leggings seitan yr flexitarian church-key. Dreamcatcher cray 8-bit mumblecore fashion axe pabst, direct trade flannel flexitarian salvia. Hoodie fam wolf gochujang, pop-up kombucha prism messenger bag affogato lomo. Gluten-free ethical literally shoreditch af hella cray mlkshk lomo iceland yuccie fam. Polaroid hammock pour-over venmo coloring book.<br><br></p>
-      </div>
-      <div class="clearfix"></div>
-      <div class="resume-link">
-        <a href="images/darinbarnes_resume.pdf" download class="basic-link"><h4><span class="link-text">Download Resume<br></span></h4></a>
-      </div>
-    </section-->
-    <section class="home-contact" id="#contact">
-      <div class="contact-intro">
-        <h3 class="subtitle">Let's talk...<br><br></h3>
-        <p>I'm always looking to collaborate on new ideas. Shoot me an email and let's start a conversation.<br><br></p>
-      </div>
-      <div class="clearfix"></div>
-      <div class="contact-link">
-        <a href="mailto:barnes.darin@gmail.com?subject=Hello" class="basic-link"><h4><span class="link-text">barnes.darin@gmail.com<br></span></h4></a>
-      </div>
-    </section>
   </div>
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
     window.sr = ScrollReveal({ reset: true });
@@ -134,23 +120,15 @@ title: Darin Barnes
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.home-work', {
-      origin: 'right',
+    sr.reveal('.mySidenavMenu', {
+      origin: 'left',
       duration: 1500,
-      viewFactor: 0.1,
+      delay: 750,
       scale: 1,
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.home-experience', {
-      origin: 'right',
-      duration: 1500,
-      viewFactor: 0.1,
-      scale: 1,
-      reset: false,
-      easing: 'ease-out',
-    });
-    sr.reveal('.home-contact', {
+    sr.reveal('.work-intro', {
       origin: 'right',
       duration: 1500,
       viewFactor: 0.1,
