@@ -1,0 +1,75 @@
+$article-layout-grid: (columns: 1, gutter: 5px)
+$article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
+$article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width: 1280px)")
+
+.contact-body
+  @include grid-container
+  @include grid-visual
+
+//.contact-intro
+  @include grid-container
+  @include grid-visual
+  padding-bottom: 6em
+
+.contact-intro .intro
+  margin-left: 0
+  padding-top: 10em
+  padding-bottom: 3em
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    position: fixed
+    @include grid-column(5)
+    @include grid-push(1)
+    max-width: 425px
+
+.contact-intro .intro-title
+  margin-left: -6px
+  font-family: $font-title
+  font-size: 3em
+  font-weight: 100
+  @media(min-width: 768px)
+    line-height: 90%
+    margin-left: -8px
+    font-size: 5.25em
+
+.contact-intro .intro-body
+  padding: 1.5em 0 .25em
+  font-family: $font-body
+  font-weight: 100
+  font-size: 1.25em
+  line-height: 125%
+  color: $black
+  @media(min-width: 768px)
+    font-size: 1.5em
+
+.contact-experience
+  padding-bottom: 6em
+  @include grid-push(2)
+  max-width: 275px
+  line-height: 150%
+  font-family: $font-body
+  font-weight: 300
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(4)
+    @include grid-push(6)
+    max-width: none
+    padding-top: 12.5em
+    max-width: 750px
+
+.experience-header
+  font-family: $font-header
+  font-size: 1.25em
+  font-weight: 300
+  padding-bottom: .5em
+  line-height: 110%
+  @media(min-width: 768px)
+    font-size: 1.5em

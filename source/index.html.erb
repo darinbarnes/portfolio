@@ -1,31 +1,34 @@
 ---
 title: Darin Barnes
 ---
-
+<section class="sidenavSection">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/db_logo_extended.png"/>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+</section>
 <header>
   <div class="nav-header">
     <div class="logo-header">
       <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
     </div>
+    <div class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 <body>
-  <div class="nav">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <img src="images/db_logo_extended.png"></img>
-      <ul>
-        <a href="#about">Home</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </ul>
-    </div>
-    <div class="mySidenavMenu">
-      <span onclick="openNav()">Menu</span>
-    </div>
-  </div>
-  <div class="home-intro">
+  <section class="home-intro">
     <div class="intro">
       <p class="intro-body">Hello, I'm<br></p>
       <p class="intro-title">Darin<br>Barnes<br></p>
@@ -34,7 +37,8 @@ title: Darin Barnes
         <a href="mailto:barnes.darin@gmail.com?subject=Hello" class="basic-link"><h4><span class="link-text">Let's talk ><br></span></h4></a>
       </div>
     </div>
-    <section class="home-about" id="#about">
+    <div class="clearfix"></div>
+    <div class="home-about">
       <img class="about-diagram" src="images/about_diagram.png"><img>
       <h3 class="subtitle">What made you switch?<br><br></h3>
       <p>This is the question that I invariably get when I tell people that I've gone from architecture, to graphic design, to user experience design (and for an added bonus, I'll sometimes add in the fact that I started off in nursing). It's always been a slightly difficult question to answer, but a simplified response is that it was never a single thing that made me switch, but rather a series of experiences that helped me discover why I wanted to design.
@@ -42,57 +46,59 @@ title: Darin Barnes
       <p>Throughout architecture school, I was always interested in the narrative aspect of architectural spaces. How could the experience of Person A differ from (or be the same as) Person B, and how could their experiences overlap? I would work through several iterations of program and circulation diagrams, often leaving the "concrete" architectural details until the very end. As I continued on into the professional world, I began to realize that even though I had a strong appreciation for architectural details, my desire to develop them was not as apparent. I remained very interested in the experiential aspect of architecture and developing methods to communicate these experiences.<br><br></p>
       <p>I decided to pursue this further, and shifted my professional focus to architectural graphic design. I could now diagram and document at length without having to concern myself with waterproofing and the structural integrity of beams. I loved all aspects of this new role in visual communication; creating presentation boards and books, developing architectural diagrams and establishing new marketing packages. Though this was absolutely the best career move I could have made, I began to miss one aspect from my architectural background: designing an experience.<br><br></p>
       <p>I could not tell you where I first discovered User Experience Design, but I can tell you that once I did find it, I knew that it was the perfect way to blend my desire to design and communicate experiences. Since the discovery, I've jumped right in with Bloc, an online UX Design bootcamp, where I've been drawing on my past design experience to help users navigate and engage with digital and physical spaces.<br><br></p>
-    </section>
-  </div>
-  <div id="home-content">
-    <section class="home-work" id="#work">
-      <div class="work-intro">
-        <h3 class="subtitle">What have you been up to?<br><br></h3>
-        <p>The following are projects that I have developed while working one-on-one with a mentor at Bloc.<br><br></p>
-      </div>
-      <div class="work-project" "uniqlo-preview">
-        <img class="project-preview" src="images/uniqlo_preview.jpg"><img>
+    </div>
+  </section>
+  <section class="home-work">
+    <div class="work-intro">
+      <h3 class="subtitle">What have you been up to?<br><br></h3>
+      <p>Since January 2017, I have been developing digital experiences at Bloc, an online bootcamp. The following are projects that I developed while working one-on-one with a mentor at Bloc.<br><br></p>
+    </div>
+    <div class="uniqlo-preview">
+      <div class="work-project">
+        <img class="project-preview" src="images/uniqlo_preview.jpg"></img>
         <div class="project-info">
           <a href="uniqlo.html" class="project-list-name"><h4><span>U by Uniqlo - Concept Design<br></span></h4></a>
           <p class="project-description">Responding to user frustrations with the digital retail experience, U by Uniqlo is a concept design for a retail companion app to enhance the Fitting Room and Check Out Experience for users at their local Uniqlo.
           </p>
-          <!-- <a href=""><p class="view-case-study">View Case Study<br></p></a> -->
         </div>
+        <div class="clearfix"></div>
       </div>
+    </div>
+    <div class="sitemap-preview">
       <div class="work-project">
-        <img class="project-preview" src="images/sitemap_preview.jpg"><img>
+        <img class="project-preview" src="images/sitemap_preview.jpg"></img>
         <div class="project-info">
           <a href="sitemap.html" class="project-list-name"><h4><span>Sitemap<br></span></h4></a>
-          <p class="project-description">Sitemap engages users with local architecture through a location-based architectural map and integrated camera.
-            Users can explore and document buildings and reach out to the Sitemap community for more information through photo-based detail requests.
+          <p class="project-description">Sitemap engages users with local architecture through a location-based architectural map and integrated camera.Users can explore and document buildings and reach out to the Sitemap community for more information through photo-based detail requests.
           </p>
-          <!-- <a href=""><p class="view-case-study">View Case Study<br></p></a> -->
         </div>
       </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="chemex-preview">
       <div class="work-project">
-        <img class="project-preview" src="images/chemex_preview.jpg"><img>
+        <img class="project-preview" src="images/chemex_preview.jpg"></img>
         <div class="project-info">
           <a href="chemex.html" class="project-list-name"><h4><span>Elevate your Coffee<br></span></h4></a>
           <p class="project-description">A concept design for a new responsive site for the Chemex coffeemaker: a glass, manual pour-over style of coffeemaker.
             The site focuses on the two primary benefits of the Chemex; the high quality taste and simple brewing process that has remained unchanged since 1941.
-          <br><br></p>
-          <!-- <a href=""><p class="view-case-study">View Case Study<br></p></a> -->
+          <br><br><br><br></p>
           </div>
           <div class="clearfix"></div>
       </div>
-      <div class="work-link">
-        <a href="" class="basic-link"><h4><span class="link-text">View All Work ><br></span></h4></a>
-      </div>
-    </section>
-  </div>
+    </div>
+    <div class="work-link">
+      <a href="" class="basic-link"><h4><span class="link-text">View All Work ><br></span></h4></a>
+    </div>
+  </section>
   <script>
-  function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-  }
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
 
-  function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-  }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
   </script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
@@ -115,15 +121,7 @@ title: Darin Barnes
     sr.reveal('.nav-header', {
       origin: 'left',
       duration: 1500,
-      delay: 750,
-      scale: 1,
-      reset: false,
-      easing: 'ease-out',
-    });
-    sr.reveal('.mySidenavMenu', {
-      origin: 'left',
-      duration: 1500,
-      delay: 750,
+      delay: 500,
       scale: 1,
       reset: false,
       easing: 'ease-out',
@@ -131,7 +129,39 @@ title: Darin Barnes
     sr.reveal('.work-intro', {
       origin: 'right',
       duration: 1500,
-      viewFactor: 0.1,
+      viewFactor: 0.2,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-preview', {
+      origin: 'right',
+      duration: 1500,
+      viewFactor: 0.2,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.sitemap-preview', {
+      origin: 'right',
+      duration: 1500,
+      viewFactor: 0.2,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.chemex-preview', {
+      origin: 'right',
+      duration: 1500,
+      viewFactor: 0.2,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.work-link', {
+      origin: 'right',
+      duration: 1500,
+      viewFactor: 0.2,
       scale: 1,
       reset: false,
       easing: 'ease-out',
