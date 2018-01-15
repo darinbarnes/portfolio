@@ -1,41 +1,45 @@
 ---
 title: U by Uniqlo - Concept Design
 ---
-
+<section class="sidenavSection">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/db_logo_extended.png"/>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+</section>
 <header>
   <div class="nav-header">
     <div class="logo-header">
       <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
     </div>
-    <div class="mySidenavMenu">
-      <span onclick="openNav()">Menu</span>
-    </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <img src="images/db_logo_extended.png"/>
-      <ul>
-        <a href="index.html">Home</a>
-        <a href="">Work</a>
-      </ul>
-    </div>
     <div class="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Work</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </header>
 <body>
-  <div class="uniqlo-intro">
+  <section class="uniqlo-intro">
     <div class="project-intro">
       <p class="intro-body">Welcome to<br></p>
       <p class="intro-title">U by<br>Uniqlo<br></p>
       <p class="intro-body">U by Uniqlo is a concept design for a retail companion app to enhance the Fitting Room and Check Out experience for users at their local Uniqlo.</p>
       <div class="clearfix"></div>
     </div>
-  </div>
-  <section class="uniqlo-hero">
+    <div class="uniqlo-hero">
+      <div class="uniqlo-hero-image">
+        <img src="images/bg_uniqlo_splash.jpg" class="uniqlo-hero-image-size"></img>
+      </div>
+    </div>
   </section>
   <div class="clearfix"></div>
   <section class="uniqlo-body">
@@ -116,6 +120,9 @@ title: U by Uniqlo - Concept Design
           <p class="project-body">Visit your local Uniqlo to pick up your Smart Bag and items to try on. Use the Smart Mirror to request additional sizes or styles.<br><br></p>
           <h3 class="project-subtitle-uniqlo">3. Grab & Go<br></h3>
           <p class="project-body">Fill your Smart Bag with the items that you’d like to keep. Walk out of the store with your Smart Bag and you will automatically be charged for your items. No lines. No wait.<br><br></p>
+          <div class="view-prototype-link">
+            <a href="https://invis.io/K2FBTD1G69P#/244639937_Onboarding_Home" target="_blank" class="basic-link"><h4><span class="link-text">View Prototype > <br></span></h4></a>
+          </div>
         </div>
         <div class="uniqlo-story-intro-image">
             <img src="images/uniqlo_story.gif" class="uniqlo-story-intro-image-size"></img>
@@ -144,7 +151,7 @@ title: U by Uniqlo - Concept Design
             <p class="project-body">In order to refine their style profile, users can swipe left on individual items to remove them and update their preferences.</p>
           </div>
           <div class="uniqlo-story-1-image-browse">
-            <img src="images/uniqlo_browse.gif" class="uniqlo-story-1-image-browse-size"></img>
+            <img src="images/uniqlo_browse_2.gif" class="uniqlo-story-1-image-browse-size"></img>
           </div>
         </div>
         <div class="uniqlo-story-D">
@@ -189,13 +196,14 @@ title: U by Uniqlo - Concept Design
             <img src="images/uniqlo_story_concierge.gif" class="uniqlo-story-2-image-concierge-size"></img>
           </div>
         </div>
+        <div class="clearfix"></div>
         <div class="uniqlo-story-H">
           <div class="uniqlo-story-2-image-fitting">
             <img src="images/uniqlo_story_fitting.jpg" class="uniqlo-story-2-image-fitting-size"></img>
           </div>
           <div class="uniqlo-story-2-text-fitting">
             <h3 class="project-subtitle">Try Your Styles<br></h3>
-            <p class="project-body">The U by Uniqlo Fitting Rooms are enhanced Fitting Rooms complete with a locking door and Smart Mirror.<br><br></p>
+            <p class="project-body-highlight">The U by Uniqlo Fitting Rooms are enhanced Fitting Rooms complete with a locking door and Smart Mirror.<br><br></p>
             <h3 class="project-subtitle">Photo Op<br></h3>
             <p class="project-body">The curved back wall of the Fitting Room and a corner mounted phone mount allow users to take optimal “style selfies”. Future versions of U by Uniqlo could include social sharing to get real-time outfit feedback.<br></p>
           </div>
@@ -217,7 +225,7 @@ title: U by Uniqlo - Concept Design
             <img src="images/uniqlo_story_bag.png" class="uniqlo-story-3-image-bag-size"></img>
           </div>
           <div class="uniqlo-story-3-text-bag">
-            <h3 class="project-subtitle">Grab & Go<br></h3>
+            <h3 class="uniqlo-story-header"><span class="uniqlo-story-header-bold">3 </span>Grab & Go<br></h3>
             <p class="project-body-highlight">After linking their Smart Bag and adding payment information, the user places their selected items into their Smart Bag. Using RFID technology, the Smart Bag recognizes the contents of the bag and creates a digital shopping cart. The user can continue to browse and add items to their Smart Bag.<br><br></p>
           </div>
         </div>
@@ -244,6 +252,15 @@ title: U by Uniqlo - Concept Design
       </div>
     </section>
   </section>
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
     window.sr = ScrollReveal({ reset: true });
@@ -254,10 +271,10 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-hero', {
+    sr.reveal('.uniqlo-hero-image', {
       origin: 'bottom',
       duration: 1000,
-      delay: 1750,
+      delay: 1000,
       scale: 1,
       reset: false,
       easing: 'ease-out',
@@ -318,7 +335,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-C', {
+    sr.reveal('.uniqlo-story-1-text-browse', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -326,7 +343,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-D', {
+    sr.reveal('.uniqlo-story-1-image-browse', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -334,7 +351,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-E', {
+    sr.reveal('.uniqlo-story-1-image-send', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -342,7 +359,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-F', {
+    sr.reveal('.uniqlo-story-1-text-send', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -350,7 +367,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-G', {
+    sr.reveal('.uniqlo-story-2-image-diagram', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -358,7 +375,7 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-H', {
+    sr.reveal('.uniqlo-story-2-text-diagram', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -366,7 +383,55 @@ title: U by Uniqlo - Concept Design
       reset: false,
       easing: 'ease-out',
     });
-    sr.reveal('.uniqlo-story-I', {
+    sr.reveal('.uniqlo-story-2-image-store', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-text-concierge', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-image-concierge', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-image-fitting', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-text-fitting', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-text-mirror', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.uniqlo-story-2-image-mirror', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,
@@ -391,6 +456,14 @@ title: U by Uniqlo - Concept Design
       easing: 'ease-out',
     });
     sr.reveal('.uniqlo-story-L', {
+      origin: 'bottom',
+      duration: 1000,
+      viewFactor: 0.1,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.project-footer', {
       origin: 'bottom',
       duration: 1000,
       viewFactor: 0.1,

@@ -14,7 +14,19 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @include grid-container
   //@include grid-visual
 
-.chemex-hero
+.chemex-hero-image
+  text-align: center
+  padding-top: 3em
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(12)
+
+.chemex-hero-image-size
+  width: 100%
+
+//.chemex-hero
   background-image: image-url("images/bg_chemex_splash.jpg")
   background-position: center top
   background-repeat: no-repeat
@@ -65,6 +77,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   padding-bottom: 3em
 
 .chemex-identity-logo-image
+  padding-bottom: 3em
   text-align: center
   @include grid-column(12)
   @include grid-media($article-layout-grid--tablet-up)
@@ -74,11 +87,14 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(2)
 
 .chemex-identity-logo-image-size
-  width: 80%
+  width: 100%
+  @media(min-width: 768px)
+    width: 85%
   @media(min-width: 1280px)
     width: 100%
 
 .chemex-identity-logo-text
+  padding-bottom: 1em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
@@ -91,6 +107,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 
 .chemex-identity-palette-image
   @extend .chemex-identity-logo-image
+  padding-bottom: 0px
 
 .chemex-identity-palette-image-size
   @extend .chemex-identity-logo-image-size
@@ -105,8 +122,8 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   padding-top: 3em
   padding-bottom: 3em
   @media(min-width: 768px)
-    padding-top: 6em
-    padding-bottom: 6em
+    padding-top: 3em
+    padding-bottom: 3em
 
 .chemex-user-data-text
   padding-bottom: 1em
@@ -130,10 +147,13 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .chemex-user-data-image-size
-  width: 80%
+  width: 75%
+  @media (min-width: 1280px)
+    width: 85%
 
 .chemex-user-strategy-text
-  padding-bottom: 1em
+  padding-top: 3em
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
@@ -142,10 +162,10 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @include grid-media($article-layout-grid--desktop-up)
     padding-top: 6em
     @include grid-column(4)
-    @include grid-push(1)
+    @include grid-push(2)
 
 .chemex-user-prefA
-  padding-bottom: 1em
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
@@ -154,8 +174,8 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @include grid-media($article-layout-grid--desktop-up)
     padding-top: 3em
     max-width: 475px
-    @include grid-column(5)
-    @include grid-push(1)
+    @include grid-column(4)
+    @include grid-push(2)
 
 .chemex-user-prefA-text
   padding-bottom: 2em
@@ -167,7 +187,17 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   width: 80%
 
 .chemex-user-prefB
-  @extend .chemex-user-prefA
+  padding-bottom: 3em
+  @include grid-column(9)
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(8)
+    @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 3em
+    max-width: 475px
+    @include grid-column(4)
+    @include grid-push(1)
 
 .chemex-user-prefB-text
   @extend .chemex-user-prefA-text
@@ -179,7 +209,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   width: 80%
 
 .chemex-user-choice-text
-  padding-bottom: 1em
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
@@ -203,6 +233,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     width: 50%
 
 .chemex-prototype-text
+  padding-top: 3em
   padding-bottom: 1em
   @include grid-column(9)
   @include grid-push(2)
@@ -210,7 +241,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-column(8)
     @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
-    padding-top: 3em
+    padding-top: 6em
     @include grid-column(4)
     @include grid-push(1)
 

@@ -13,6 +13,7 @@
 @import "partials/chemex"
 @import "partials/sitemap"
 @import "partials/contact"
+@import "partials/work"
 
 $article-layout-grid: (columns: 1, gutter: 5px)
 $article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
@@ -54,6 +55,12 @@ header
 body
   padding-bottom: 6em
 
+.home-work
+  z-index: -100
+
+.home-intro
+  z-index: -50
+
 .subtitle
   font-size: 1.2em
   font-weight: 300
@@ -63,6 +70,7 @@ body
 .logo-header
   @include grid-column(1)
   margin-left: -5px
+  padding-bottom: 10px
 
 .nav-menu
   display: none
@@ -103,14 +111,17 @@ body
   font-family: $font-header
   display: inline-table
   font-weight: 500
+  padding-top: 5.4em
   list-style-type: none
   text-transform: uppercase
-  padding-right: 2em
-  padding-top: 5.3em
   vertical-align: middle
   @include grid-push(2)
   @media(min-width: 768px)
     display: none
+
+.mySidenavMenu:hover
+  border-bottom: 3px solid $black
+  cursor: pointer
 
 .sidenav
   height: 100%
@@ -136,6 +147,9 @@ body
   color: $neutral
   display: block
   transition: 0.3s
+
+.sidenav a:hover
+  background-color: $black
 
 .sidenav .closebtn
   position: absolute
@@ -209,12 +223,15 @@ body
 
 .about-diagram
   padding-bottom: 3em
-  width: 95%
+  width: 100%
 
 .home-work
   @include grid-container
   //@include grid-visual
   padding-bottom: 6em
+
+.work-project
+  z-index: -5
 
 .work-intro
   @extend .home-about
@@ -271,6 +288,10 @@ body
   font-size: 1.125em
   @media(min-width: 768px)
     font-size: 1.125em
+
+.active-page
+  border-bottom: 3px solid $black
+
 
 .project-list-name span
   border-bottom: 3px solid $yellow
@@ -342,14 +363,6 @@ body
   @include grid-container
   //@include grid-visual
   padding-bottom: 6em
-
-.contact-intro
-  @extend .home-about
-  padding-bottom: 0px
-  @include grid-media($article-layout-grid--desktop-up)
-    @include grid-column(4)
-    @include grid-push(6)
-    padding-top: 3em
 
 .project-intro
   padding-top: 7em

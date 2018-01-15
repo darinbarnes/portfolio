@@ -1,0 +1,70 @@
+$article-layout-grid: (columns: 1, gutter: 5px)
+$article-layout-grid--tablet-up: (columns: 12, gutter: 5px, media: "(min-width: 768px)")
+$article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width: 1280px)")
+
+.work-body
+  @include grid-container
+  //@include grid-visual
+
+.projects-intro
+  padding-top: 10em
+  @include grid-push(2)
+  max-width: 275px
+  @include grid-media($article-layout-grid--tablet-up)
+    padding-bottom: 3em
+    @include grid-column(8)
+    @include grid-push(2)
+    max-width: none
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 10em
+    @include grid-column(11)
+    @include grid-push(1)
+    max-width: 425px
+
+.project-grid
+  padding-top: 10em
+  @include grid-push(2)
+  @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 12.5em
+    @include grid-column(11)
+    @include grid-push(1)
+
+.project-grid a
+  text-decoration: none
+
+.project-grid-preview
+  width: 100%
+  text-align: center
+  padding-top: 1em
+
+.project-grid-title
+  font-family: $font-header
+  text-transform: uppercase
+  font-size: 1.25em
+  font-weight: 500
+  color: $black
+
+.project-grid-category
+  padding-top: .5em
+  font-family: $font-header
+  font-style: italic
+  font-size: 1em
+  font-weight: 300
+  color: $black
+  line-height: 110%
+
+.project-grid-container
+  box-shadow: 5px 10px 10px rgba(51, 51, 51, 0.05)
+  padding: 20px 20px 20px 0px
+  margin-right: 10px
+  margin-bottom: 10px
+  text-align: center
+  @include grid-column(10)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(10)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(3.33333)
+
+.project-grid-container:hover
+  background-color: $neutral
+  box-shadow: 5px 10px 10px rgba(51, 51, 51, 0.2)

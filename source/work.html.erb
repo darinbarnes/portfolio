@@ -1,0 +1,80 @@
+---
+title: Work
+---
+<section class="sidenavSection">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/db_logo_extended.png"/>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+</section>
+<header>
+  <div class="nav-header">
+    <div class="logo-header">
+      <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
+    </div>
+    <div class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html" class="active-page">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<body class="work-body">
+  <!--section class="projects-intro">
+    <p class="intro-title">Select<br>Projects</p>
+  </section-->
+  <div class="clearfix"></div>
+  <section class="project-grid">
+    <a href="uniqlo.html" class="project-grid-container">
+      <div class="project-grid-item">
+        <img class="project-grid-preview" src="images/uniqlo_preview.jpg"></img>
+        <h4 class="project-grid-title">U by Uniqlo - Concept Design</h4>
+        <p class="project-grid-category">UX Design, Graphic Design, Architecture</p>
+      </div>
+    </a>
+    <a href="sitemap.html" class="project-grid-container">
+      <div class="project-grid-item">
+        <img class="project-grid-preview" src="images/sitemap_preview.jpg"></img>
+        <h4 class="project-grid-title">Sitemap</h4>
+        <p class="project-grid-category">UX Design, Graphic Design</p>
+      </div>
+    </a>
+    <a href="sitemap.html" class="project-grid-container">
+      <div class="project-grid-item">
+        <img class="project-grid-preview" src="images/chemex_preview.jpg"></img>
+        <h4 class="project-grid-title">Chemex</h4>
+        <p class="project-grid-category">UX Design, Graphic Design</p>
+      </div>
+    </a>
+    <div class="clearfix"></div>
+  </section>
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script   src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+  window.sr = ScrollReveal();
+    sr.reveal('.project-grid-container', {
+      duration: 2000,
+      origin: 'top',
+      delay: 500,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    }, 200);
+  </script>
+</body>

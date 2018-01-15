@@ -190,6 +190,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-column(5)
 
 .sitemap-feature-sketch-size
+  margin-left: -20px
   width: 85%
   @media (min-width: 1280px)
     width: 100%
@@ -239,6 +240,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     width: 35%
 
 .sitemap-identity-image
+  padding-bottom: 3em
   text-align: center
   @include grid-column(12)
   @include grid-media($article-layout-grid--tablet-up)
@@ -250,14 +252,16 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .sitemap-identity-image-size
-  width: 100%
-  @media (min-width:1280px)
+  width: 85%
+  @media (min-width:768px)
     width: 100%
 
 .sitemap-identity-palette-text
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
+    padding-bottom: 1em
     @include grid-column(8)
     @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
@@ -266,9 +270,11 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .sitemap-identity-palette-image
+  padding-bottom: 3em
   text-align: center
   @include grid-column(12)
   @include grid-media($article-layout-grid--tablet-up)
+    padding-bottom: 1em
     padding-top: 3em
     @include grid-column(8)
     @include grid-push(2)
@@ -278,12 +284,16 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .sitemap-identity-palette-size
-  width: 100%
+  width: 85%
+  @media (min-width:768px)
+    width: 100%
 
 .sitemap-identity-typography-text
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
+    padding-bottom: 1em
     padding-top: 3em
     @include grid-column(8)
     @include grid-push(2)
@@ -305,7 +315,9 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .sitemap-identity-typography-image-size
-  width: 100%
+  width: 85%
+  @media (min-width:768px)
+    width: 100%
 
 .sitemap-prototype
   background-color: #1B4651
@@ -316,12 +328,14 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     padding-bottom: 6em
 
 .sitemap-prototype-intro
+  padding-bottom: 3em
   @include grid-column(9)
   @include grid-push(2)
   @include grid-media($article-layout-grid--tablet-up)
     @include grid-column(8)
     @include grid-push(2)
   @include grid-media($article-layout-grid--desktop-up)
+    padding-bottom: 1em
     @include grid-column(4)
     @include grid-push(1)
 
@@ -353,4 +367,6 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .sitemap-prototype-full-image-size
-  width: 100%
+  width: 85%
+  @media (min-width:768px)
+    width: 100%

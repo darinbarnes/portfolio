@@ -1,27 +1,28 @@
 ---
 title: Elevate Your Coffee
 ---
-
+<section class="sidenavSection">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/db_logo_extended.png"/>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+</section>
 <header>
   <div class="nav-header">
     <div class="logo-header">
       <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
     </div>
-    <div class="mySidenavMenu">
-      <span onclick="openNav()">Menu</span>
-    </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <img src="images/db_logo_extended.png"/>
-      <ul>
-        <a href="index.html">Home</a>
-        <a href="">Work</a>
-      </ul>
-    </div>
     <div class="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Work</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -35,8 +36,12 @@ title: Elevate Your Coffee
       <div class="clearfix"></div>
     </div>
   </div>
-  <section class="chemex-hero">
-  </section>
+  <div class="chemex-hero">
+    <div class="chemex-hero-image">
+      <img src="images/bg_chemex_splash.jpg" class="chemex-hero-image-size"></img>
+    </div>
+  </div>
+</section>
   <div class="clearfix"></div>
   <section class="chemex-body">
     <section class="chemex-research">
@@ -132,6 +137,15 @@ title: Elevate Your Coffee
       </div>
     </section>
   </section>
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
     window.sr = ScrollReveal({ reset: true });
