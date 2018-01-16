@@ -55,7 +55,7 @@ activate :livereload
 
 configure :build do
 
-  set :http_prefix, "/portfolio"
+  set :http_prefix, "/"
   set :site_url, "/"
 end
 
