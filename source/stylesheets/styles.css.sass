@@ -50,7 +50,7 @@ header
   position: fixed
   width: 100%
   background-color: rgba(252,251,247,.5)
-  z-index: 1
+  z-index: 2
 
 body
   padding-bottom: 6em
@@ -73,6 +73,7 @@ body
   padding-bottom: 10px
 
 .nav-menu
+  //z-index: 20
   display: none
   padding-left: 10px
   @include grid-media($article-layout-grid--tablet-up)
@@ -159,6 +160,7 @@ body
   margin-left: 50px
 
 .intro
+  z-index: 1
   padding-top: 10em
   padding-bottom: 3em
   @include grid-push(2)
@@ -226,12 +228,10 @@ body
   width: 100%
 
 .home-work
+  z-index: -5
   @include grid-container
   //@include grid-visual
   padding-bottom: 6em
-
-.work-project
-  z-index: -5
 
 .work-intro
   @extend .home-about
