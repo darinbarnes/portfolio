@@ -1,3 +1,9 @@
+require_relative "./lib/build_cleaner"
+
+configure :build do
+  activate :build_cleaner
+end
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -46,3 +52,20 @@ activate :livereload
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+configure :build do
+
+  set :http_prefix, "/portfolio"
+  set :site_url, "/portfolio/"
+end
+
+# Github Deploy
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
