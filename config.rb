@@ -56,7 +56,7 @@ activate :livereload
 configure :build do
 
   set :http_prefix, "/portfolio"
-  set :site_url, "/portfolio/"
+  set :site_url, "/"
 end
 
 # Github Deploy
