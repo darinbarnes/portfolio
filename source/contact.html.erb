@@ -1,0 +1,87 @@
+---
+title: Contact
+---
+<section class="sidenavSection">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img src="images/db_logo_extended.png"/>
+    <ul>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </div>
+  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+</section>
+<header>
+  <div class="nav-header">
+    <div class="logo-header">
+      <div id="logo-desktop"><img src="images/db_logo.png"/></a></div>
+    </div>
+    <div class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html" class="active-page">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<body class="contact-body">
+  <section class="contact-photo">
+    <img class="contact-photo-image" src="images/contact_photo.png"><img>
+    <div class="clearfix"></div>
+  </section>
+  <section class="contact-intro">
+    <p class="intro-title">Hello<br></p>
+    <p class="intro-body">I'm always looking to collaborate or discuss new ideas. Shoot me an email and let's start a conversation.<br><br></p>
+    <div class="contact-link">
+      <a href="mailto:barnes.darin@gmail.com?subject=Hello" class="basic-link"><h4><span class="link-text">Let's talk ><br></span></h4><br></a>
+    </div>
+    <!--div class="contact-link">
+      <a href="images/darin_barnes_resume.pdf" download><h4><span class="basic-link">Download Resume ><br></span></h4></a>
+    </div>
+    <div class="clearfix"></div-->
+  </section>
+  <!--section class="contact-experience">
+    <div class="contact-experience-education">
+      <h3 class="experience-header">Education<br></h3>
+      <p class="experience-title">Bloc<br><span class="experience-minor">User Experience Design Program, 2018</span><br></p>
+      <p class="experience-title">Wentworth Institute of Technology<br><span class="experience-minor">Bachelor of Architecture, 2009<br>Master of Architecture, 2010</span><br><br></p>
+    </div>
+    <div class="contact-experience-professional">
+      <h3 class="experience-header">Experience<br></h3>
+      <p class="experience-title">Pickard Chilton Architects<br><span class="experience-minor">Graphic Design Coordinator, 2014-Present</span><br></p>
+      <p class="experience-title">Pickard Chilton Architects<br><span class="experience-minor">Architectural Designer, 2009-2014</span><br></p>
+    </div>
+    <div class="clearfix"></div>
+  </section-->
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script>
+    window.sr = ScrollReveal({ reset: true });
+    sr.reveal('.contact-photo', {
+      origin: 'left',
+      duration: 1500,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    sr.reveal('.contact-intro', {
+      origin: 'right',
+      duration: 1500,
+      delay: 500,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
+    </script>
+</body>
