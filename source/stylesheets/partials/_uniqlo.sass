@@ -161,7 +161,18 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @media(min-width: 1280px)
     max-width: 375px
 
-.uniqlo-story-intro-image
+.uniqlo-story-intro-image video
+  padding-bottom: 3em
+  text-align: center
+  @include grid-column(12)
+  @include grid-media($article-layout-grid--tablet-up)
+    @include grid-column(12)
+  @include grid-media($article-layout-grid--desktop-up)
+    @include grid-column(6)
+    //@include grid-push(1)
+    padding-bottom: 6em
+
+.uniqlo-base-image
   padding-bottom: 3em
   text-align: center
   @include grid-column(12)
@@ -208,7 +219,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .uniqlo-story-u-image
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   padding-bottom: 0px
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(5)
@@ -248,7 +259,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   @media(min-width: 1268px)
     max-width: 500px
 
-.uniqlo-story-1-image-browse
+.uniqlo-story-1-image-browse video
   padding-bottom: 3em
   text-align: center
   @include grid-column(10)
@@ -265,7 +276,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   margin-left: -3em
 
 .uniqlo-story-1-image-send
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
 
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(6)
@@ -281,7 +292,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-column(4)
 
 .uniqlo-story-2-image-diagram
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(7)
 
@@ -303,7 +314,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     max-width: 500px
 
 .uniqlo-story-2-image-store
-  //@extend .uniqlo-story-intro-image
+  //@extend .uniqlo-base-image
   //@include grid-media($article-layout-grid--desktop-up)
     @include grid-column(12)
 
@@ -314,6 +325,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 .uniqlo-story-2-text-concierge
   @extend .uniqlo-story-intro-text
   @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 2.5em
     @include grid-column(4)
     @include grid-push(2)
 
@@ -322,7 +334,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     max-width: 500px
 
 .uniqlo-story-2-image-concierge
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(3)
     @include grid-push(1)
@@ -335,7 +347,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     width: 90%
 
 .uniqlo-story-2-image-fitting
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(5)
     @include grid-push(1)
@@ -350,17 +362,19 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 .uniqlo-story-2-text-fitting
   @extend .uniqlo-story-intro-text
   @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
     @include grid-column(4)
     @include grid-push(1)
 
 .uniqlo-story-2-text-mirror
   @extend .uniqlo-story-intro-text
   @include grid-media($article-layout-grid--desktop-up)
+    padding-top: 6em
     @include grid-column(4)
     @include grid-push(2)
 
-.uniqlo-story-2-image-mirror
-  @extend .uniqlo-story-intro-image
+.uniqlo-story-2-image-mirror video
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(5)
 
@@ -370,7 +384,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
 
 .uniqlo-story-3-image-bag
   margin-left: -5px
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--tablet-up)
     margin-left: -25px
   @include grid-media($article-layout-grid--desktop-up)
@@ -395,7 +409,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
   padding-top: 1.5em
 
 .uniqlo-story-3-image-checkout
-  @extend .uniqlo-story-intro-image
+  @extend .uniqlo-base-image
   @include grid-media($article-layout-grid--desktop-up)
     @include grid-column(4)
     @include grid-push(1)
@@ -411,7 +425,7 @@ $article-layout-grid--desktop-up: (columns: 12, gutter: 5px, media: "(min-width:
     @include grid-push(1)
 
 .uniqlo-story-3-image-walkout
-  //@extend .uniqlo-story-intro-image
+  //@extend .uniqlo-base-image
   //padding-bottom: 0px
   //@include grid-media($article-layout-grid--desktop-up)
     @include grid-column(12)
