@@ -11,7 +11,9 @@ title: Sitemap
       <a href="contact.html">Contact</a>
     </ul>
   </div>
-  <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+  <div class="sideNavLink">
+    <span class="mySidenavMenu" onclick="openNav()">Menu</span>
+  </div>
 </section>
 <header>
   <div class="nav-header">
@@ -202,6 +204,13 @@ title: Sitemap
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script>
     window.sr = ScrollReveal({ reset: true });
+    sr.reveal('.sideNavLink', {
+      origin: 'left',
+      duration: 1500,
+      scale: 1,
+      reset: false,
+      easing: 'ease-out',
+    });
     sr.reveal('.project-intro', {
       origin: 'left',
       duration: 1500,
